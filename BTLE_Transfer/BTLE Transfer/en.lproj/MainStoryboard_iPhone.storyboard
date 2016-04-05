@@ -88,19 +88,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x8A-vY-Jwn">
-                                <rect key="frame" x="47" y="86" width="227" height="111"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Current Weight" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x8A-vY-Jwn">
+                                <rect key="frame" x="77" y="72" width="167" height="46"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_cup.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-j6-h6Z">
+                                <rect key="frame" x="40" y="145" width="240" height="315"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="x8A-vY-Jwn" secondAttribute="trailing" constant="20" symbolic="YES" id="EE0-A9-Pon"/>
-                            <constraint firstItem="x8A-vY-Jwn" firstAttribute="leading" secondItem="Y9o-so-s2T" secondAttribute="leading" constant="20" symbolic="YES" id="KsC-Pi-Vi7"/>
-                            <constraint firstAttribute="bottom" secondItem="x8A-vY-Jwn" secondAttribute="bottom" constant="20" symbolic="YES" id="X4b-du-GBr"/>
-                            <constraint firstItem="x8A-vY-Jwn" firstAttribute="top" secondItem="Y9o-so-s2T" secondAttribute="top" constant="20" symbolic="YES" id="dZr-Ek-FX1"/>
+                            <constraint firstAttribute="bottom" secondItem="ugK-j6-h6Z" secondAttribute="bottom" constant="20" symbolic="YES" id="0Mk-vL-xwB"/>
+                            <constraint firstAttribute="trailing" secondItem="x8A-vY-Jwn" secondAttribute="trailing" constant="76" id="EE0-A9-Pon"/>
+                            <constraint firstItem="ugK-j6-h6Z" firstAttribute="leading" secondItem="Y9o-so-s2T" secondAttribute="leadingMargin" constant="24" id="Gxi-Da-Hcn"/>
+                            <constraint firstItem="x8A-vY-Jwn" firstAttribute="leading" secondItem="Y9o-so-s2T" secondAttribute="leading" constant="77" id="KsC-Pi-Vi7"/>
+                            <constraint firstItem="ugK-j6-h6Z" firstAttribute="top" secondItem="x8A-vY-Jwn" secondAttribute="bottom" constant="27" id="LMJ-vz-bib"/>
+                            <constraint firstAttribute="bottom" secondItem="x8A-vY-Jwn" secondAttribute="bottom" constant="362" id="X4b-du-GBr"/>
+                            <constraint firstItem="x8A-vY-Jwn" firstAttribute="top" secondItem="Y9o-so-s2T" secondAttribute="top" constant="72" id="dZr-Ek-FX1"/>
+                            <constraint firstItem="ugK-j6-h6Z" firstAttribute="centerX" secondItem="x8A-vY-Jwn" secondAttribute="centerX" id="gwh-q0-a3f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cup 1" id="qzP-bt-9oF"/>
@@ -203,19 +211,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-js-cSM">
-                                <rect key="frame" x="56" y="98" width="208" height="125"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Current Weight" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-js-cSM">
+                                <rect key="frame" x="87" y="72" width="147" height="67"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_cup.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c6N-RL-lfP">
+                                <rect key="frame" x="40" y="147" width="240" height="320"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fqj-js-cSM" firstAttribute="leading" secondItem="cul-Kk-scB" secondAttribute="leading" constant="20" symbolic="YES" id="0FE-Bl-Mic"/>
-                            <constraint firstAttribute="trailing" secondItem="fqj-js-cSM" secondAttribute="trailing" constant="20" symbolic="YES" id="D7D-DV-VmT"/>
-                            <constraint firstAttribute="bottom" secondItem="fqj-js-cSM" secondAttribute="bottom" constant="20" symbolic="YES" id="PFp-KO-uDE"/>
-                            <constraint firstItem="fqj-js-cSM" firstAttribute="top" secondItem="cul-Kk-scB" secondAttribute="top" constant="20" symbolic="YES" id="khg-Qf-uuM"/>
+                            <constraint firstItem="fqj-js-cSM" firstAttribute="leading" secondItem="cul-Kk-scB" secondAttribute="leading" constant="87" id="0FE-Bl-Mic"/>
+                            <constraint firstAttribute="trailing" secondItem="fqj-js-cSM" secondAttribute="trailing" constant="86" id="D7D-DV-VmT"/>
+                            <constraint firstAttribute="bottom" secondItem="fqj-js-cSM" secondAttribute="bottom" constant="341" id="PFp-KO-uDE"/>
+                            <constraint firstItem="aBY-pa-HkO" firstAttribute="top" secondItem="c6N-RL-lfP" secondAttribute="bottom" constant="13" id="TjF-mm-dBS"/>
+                            <constraint firstItem="c6N-RL-lfP" firstAttribute="centerX" secondItem="fqj-js-cSM" secondAttribute="centerX" id="VbP-ct-ZsU"/>
+                            <constraint firstItem="c6N-RL-lfP" firstAttribute="top" secondItem="fqj-js-cSM" secondAttribute="bottom" constant="8" symbolic="YES" id="hHd-KY-PWW"/>
+                            <constraint firstItem="fqj-js-cSM" firstAttribute="top" secondItem="cul-Kk-scB" secondAttribute="top" constant="72" id="khg-Qf-uuM"/>
+                            <constraint firstItem="c6N-RL-lfP" firstAttribute="leading" secondItem="cul-Kk-scB" secondAttribute="leadingMargin" constant="24" id="rf4-Mi-htO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cup 2" id="bde-VN-rCE"/>
@@ -228,6 +243,9 @@
             <point key="canvasLocation" x="1188" y="388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="empty_cup.jpg" width="341" height="450"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
