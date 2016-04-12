@@ -88,37 +88,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Current Weight" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x8A-vY-Jwn">
-                                <rect key="frame" x="77" y="72" width="167" height="46"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_cup.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-j6-h6Z">
-                                <rect key="frame" x="40" y="145" width="240" height="315"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_cup_paintMod.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q5r-Sr-pGx">
+                                <rect key="frame" x="51" y="143" width="218" height="309"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7h-IQ-46g">
+                                <rect key="frame" x="93" y="94" width="125" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="N2C-2j-vGo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ugK-j6-h6Z" secondAttribute="bottom" constant="20" symbolic="YES" id="0Mk-vL-xwB"/>
-                            <constraint firstAttribute="trailing" secondItem="x8A-vY-Jwn" secondAttribute="trailing" constant="76" id="EE0-A9-Pon"/>
-                            <constraint firstItem="ugK-j6-h6Z" firstAttribute="leading" secondItem="Y9o-so-s2T" secondAttribute="leadingMargin" constant="24" id="Gxi-Da-Hcn"/>
-                            <constraint firstItem="x8A-vY-Jwn" firstAttribute="leading" secondItem="Y9o-so-s2T" secondAttribute="leading" constant="77" id="KsC-Pi-Vi7"/>
-                            <constraint firstItem="ugK-j6-h6Z" firstAttribute="top" secondItem="x8A-vY-Jwn" secondAttribute="bottom" constant="27" id="LMJ-vz-bib"/>
-                            <constraint firstAttribute="bottom" secondItem="x8A-vY-Jwn" secondAttribute="bottom" constant="362" id="X4b-du-GBr"/>
-                            <constraint firstItem="x8A-vY-Jwn" firstAttribute="top" secondItem="Y9o-so-s2T" secondAttribute="top" constant="72" id="dZr-Ek-FX1"/>
-                            <constraint firstItem="ugK-j6-h6Z" firstAttribute="centerX" secondItem="x8A-vY-Jwn" secondAttribute="centerX" id="gwh-q0-a3f"/>
+                            <constraint firstItem="Q5r-Sr-pGx" firstAttribute="centerX" secondItem="Y9o-so-s2T" secondAttribute="centerX" id="5x7-n6-82I"/>
+                            <constraint firstItem="u7h-IQ-46g" firstAttribute="leading" secondItem="Y9o-so-s2T" secondAttribute="leadingMargin" constant="77" id="7cm-le-Sr6"/>
+                            <constraint firstItem="u7h-IQ-46g" firstAttribute="top" secondItem="gSf-oM-18z" secondAttribute="bottom" constant="30" id="8uM-xa-DL6"/>
+                            <constraint firstItem="Q5r-Sr-pGx" firstAttribute="leading" secondItem="Y9o-so-s2T" secondAttribute="leadingMargin" constant="35" id="IKp-CK-n9M"/>
+                            <constraint firstItem="HP5-FO-OTn" firstAttribute="top" secondItem="Q5r-Sr-pGx" secondAttribute="bottom" constant="28" id="JZO-2u-h4f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u7h-IQ-46g" secondAttribute="trailing" constant="86" id="gF4-d9-Nmw"/>
+                            <constraint firstItem="Q5r-Sr-pGx" firstAttribute="top" secondItem="u7h-IQ-46g" secondAttribute="bottom" constant="28" id="n7l-V3-eCb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cup 1" id="qzP-bt-9oF"/>
                     <connections>
-                        <outlet property="textview" destination="x8A-vY-Jwn" id="ag1-CZ-qwh"/>
+                        <outlet property="percentageLabel" destination="u7h-IQ-46g" id="eAD-iI-dJO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpQ-5J-p45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-151"/>
+            <point key="canvasLocation" x="1175" y="-140"/>
         </scene>
         <!--Peripheral-->
         <scene sceneID="RtB-hE-wW3">
@@ -211,40 +212,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Current Weight" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-js-cSM">
-                                <rect key="frame" x="87" y="72" width="147" height="67"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_cup.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c6N-RL-lfP">
-                                <rect key="frame" x="40" y="147" width="240" height="320"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_cup_paintMod.png" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-Q3-JTN">
+                                <rect key="frame" x="51" y="143" width="218" height="309"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-6M-h9t">
+                                <rect key="frame" x="111" y="94" width="99" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="gDJ-Un-UyU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fqj-js-cSM" firstAttribute="leading" secondItem="cul-Kk-scB" secondAttribute="leading" constant="87" id="0FE-Bl-Mic"/>
-                            <constraint firstAttribute="trailing" secondItem="fqj-js-cSM" secondAttribute="trailing" constant="86" id="D7D-DV-VmT"/>
-                            <constraint firstAttribute="bottom" secondItem="fqj-js-cSM" secondAttribute="bottom" constant="341" id="PFp-KO-uDE"/>
-                            <constraint firstItem="aBY-pa-HkO" firstAttribute="top" secondItem="c6N-RL-lfP" secondAttribute="bottom" constant="13" id="TjF-mm-dBS"/>
-                            <constraint firstItem="c6N-RL-lfP" firstAttribute="centerX" secondItem="fqj-js-cSM" secondAttribute="centerX" id="VbP-ct-ZsU"/>
-                            <constraint firstItem="c6N-RL-lfP" firstAttribute="top" secondItem="fqj-js-cSM" secondAttribute="bottom" constant="8" symbolic="YES" id="hHd-KY-PWW"/>
-                            <constraint firstItem="fqj-js-cSM" firstAttribute="top" secondItem="cul-Kk-scB" secondAttribute="top" constant="72" id="khg-Qf-uuM"/>
-                            <constraint firstItem="c6N-RL-lfP" firstAttribute="leading" secondItem="cul-Kk-scB" secondAttribute="leadingMargin" constant="24" id="rf4-Mi-htO"/>
+                            <constraint firstItem="cp4-Q3-JTN" firstAttribute="top" secondItem="7MX-6M-h9t" secondAttribute="bottom" constant="17" id="4nt-EK-EYX"/>
+                            <constraint firstItem="aBY-pa-HkO" firstAttribute="top" secondItem="cp4-Q3-JTN" secondAttribute="bottom" constant="28" id="61r-9g-ile"/>
+                            <constraint firstItem="7MX-6M-h9t" firstAttribute="leading" secondItem="cul-Kk-scB" secondAttribute="leadingMargin" constant="95" id="Hex-AC-6tD"/>
+                            <constraint firstItem="cp4-Q3-JTN" firstAttribute="leading" secondItem="cul-Kk-scB" secondAttribute="leadingMargin" constant="35" id="aMf-SX-qPJ"/>
+                            <constraint firstItem="7MX-6M-h9t" firstAttribute="centerX" secondItem="cul-Kk-scB" secondAttribute="centerX" id="ebI-5p-Xi3"/>
+                            <constraint firstItem="7MX-6M-h9t" firstAttribute="top" secondItem="EqH-4b-Crl" secondAttribute="bottom" constant="30" id="fJ5-nj-oc5"/>
+                            <constraint firstItem="7MX-6M-h9t" firstAttribute="centerX" secondItem="cp4-Q3-JTN" secondAttribute="centerX" id="sEl-ld-MVq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cup 2" id="bde-VN-rCE"/>
-                    <connections>
-                        <outlet property="textview" destination="fqj-js-cSM" id="pD6-2s-kTr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjq-vf-F1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="388"/>
+            <point key="canvasLocation" x="1175" y="382"/>
         </scene>
     </scenes>
     <resources>
-        <image name="empty_cup.jpg" width="341" height="450"/>
+        <image name="empty_cup_paintMod.png" width="240" height="360"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

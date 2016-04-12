@@ -61,6 +61,9 @@
 @property (strong, nonatomic) CBPeripheral          *discoveredPeripheral;
 @property (strong, nonatomic) NSMutableData         *data;
 
+@property (strong, nonatomic) IBOutlet UILabel *waterlevel;
+@property (weak, nonatomic) IBOutlet UILabel *percentageLabel;
+
 @end
 
 
@@ -82,6 +85,31 @@
     
     // And somewhere to store the incoming data
     _data = [[NSMutableData alloc] init];
+    
+    //UIImageView* image1 = [UIImageView imageNamed:@"MyImage"];
+    //UIImageView *imagesx =[[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
+    
+    _waterlevel = [[UILabel alloc] initWithFrame:CGRectMake(97, 220, 157, 275)];
+    _waterlevel.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:_waterlevel];
+    
+    //CGRect arect = CGRectMake(100, 100, 100, 100);
+    //self.waterlevel.backgroundColor = [UIColor blackColor];
+    //self.waterlevel.frame = arect;
+    //self.waterlevel.contentMode = UIViewContentModeScaleToFill;
+    
+    //[self changeWaterLevel:60];
+    
+    //self.percentageLabel.text = @"weightString";
+}
+
+- (void)changeWaterLevel:(double)newLevel {
+    double hundredY = 220;
+    double hundredHeight = 275;
+    double dy = (100-newLevel)/100*hundredY;
+    
+    CGRect arect = CGRectMake(97, hundredY+dy, 157, hundredHeight-dy);
+    self.waterlevel.frame = arect;
 }
 
 
@@ -128,6 +156,7 @@
 {
     [self.centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]]
                                                 options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
+    
     
     
     NSLog(@"Scanning started");
@@ -251,19 +280,41 @@
     }
     
     NSString *stringFromData = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
-    
+    NSLog(@"string from Data Received: %@", stringFromData);
     // Have we got everything we need?
-    if ([stringFromData isEqualToString:@"EOM"]) {
+    //if ([stringFromData isEqualToString:@"EOM"]) {
         
+        //NSLog(@"received EOM");
         // We have, so show the data, 
-        [self.textview setText:[[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding]];
-        
+        //[self.textview setText:[[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding]];
+    
+    
+        //convert the NSString to an NSNumber so we can calculate the percentage of the cup that is full
+        //NSNumber  *aNum = [NSNumber numberWithInteger: [stringFromData integerValue]];
+        //NSLog(@"aNum: %@",aNum);//NSString to NSNumber
+        double number=[stringFromData doubleValue];
+        NSLog(@"number before comp: %f",(double)number);//NSString to NSInteger
+    
+        //int64_t weight_numb = (number / 10) * 100;
+        number = (number / 9.99999) * 100;
+        NSLog(@"number after comp: %li",(long)number);
+
+    
+        NSString *weightString = [NSString stringWithFormat:@"%ld", (long)number];
+        NSLog(@"weight string is now: %@", weightString);
+    
+    
+//        [self.textview setText:stringFromData];
+        self.percentageLabel.text = [weightString stringByAppendingString:@"%"];
+
+        [self changeWaterLevel:(double)number];
+    
         // Cancel our subscription to the characteristic
         [peripheral setNotifyValue:NO forCharacteristic:characteristic];
         
         // and disconnect from the peripehral
         [self.centralManager cancelPeripheralConnection:peripheral];
-    }
+    //}
 
     // Otherwise, just add the data on to what we already have
     [self.data appendData:characteristic.value];
