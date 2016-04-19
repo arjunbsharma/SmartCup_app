@@ -179,6 +179,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					B9F9161415D5806400B3B398 = {
+						DevelopmentTeam = HG2X3CH8DX;
+					};
+				};
 			};
 			buildConfigurationList = B9F9160F15D5806400B3B398 /* Build configuration list for PBXProject "BTLE Transfer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -318,12 +323,14 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BTLE Transfer/BTLE Transfer-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/BTLE Transfer/BTLE Transfer-Info.plist";
 				PRODUCT_NAME = "BTLE Transfer";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -334,12 +341,14 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BTLE Transfer/BTLE Transfer-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/BTLE Transfer/BTLE Transfer-Info.plist";
 				PRODUCT_NAME = "BTLE Transfer";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

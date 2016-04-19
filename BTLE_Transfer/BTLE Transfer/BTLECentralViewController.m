@@ -104,11 +104,18 @@
 }
 
 - (void)changeWaterLevel:(double)newLevel {
+
     double hundredY = 220;
     double hundredHeight = 275;
     double dy = (100-newLevel)/100*hundredY;
+    double width = 157;
     
-    CGRect arect = CGRectMake(97, hundredY+dy, 157, hundredHeight-dy);
+    if (newLevel == 0){
+        width = 0;
+        dy = 275;
+    }
+    
+    CGRect arect = CGRectMake(97, hundredY+dy, width, hundredHeight-dy);
     self.waterlevel.frame = arect;
 }
 
