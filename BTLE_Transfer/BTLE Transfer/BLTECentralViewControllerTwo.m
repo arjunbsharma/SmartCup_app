@@ -1,60 +1,17 @@
-/*
- 
- File: LECentralViewController.m
- 
- Abstract: Interface to use a CBCentralManager to scan for, and receive
- data from, a version of the app in Peripheral Mode
- 
- Version: 1.0
- 
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by
- Apple Inc. ("Apple") in consideration of your agreement to the
- following terms, and your use, installation, modification or
- redistribution of this Apple software constitutes acceptance of these
- terms.  If you do not agree with these terms, please do not use,
- install, modify or redistribute this Apple software.
- 
- In consideration of your agreement to abide by the following terms, and
- subject to these terms, Apple grants you a personal, non-exclusive
- license, under Apple's copyrights in this original Apple software (the
- "Apple Software"), to use, reproduce, modify and redistribute the Apple
- Software, with or without modifications, in source and/or binary forms;
- provided that if you redistribute the Apple Software in its entirety and
- without modifications, you must retain this notice and the following
- text and disclaimers in all such redistributions of the Apple Software.
- Neither the name, trademarks, service marks or logos of Apple Inc.
- may be used to endorse or promote products derived from the Apple
- Software without specific prior written permission from Apple.  Except
- as expressly stated in this notice, no other rights or licenses, express
- or implied, are granted by Apple herein, including but not limited to
- any patent rights that may be infringed by your derivative works or by
- other works in which the Apple Software may be incorporated.
- 
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
- 
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
- POSSIBILITY OF SUCH DAMAGE.
- 
- Copyright (C) 2012 Apple Inc. All Rights Reserved.
- 
- */
+//
+//  BLTECentralViewControllerTwo.m
+//  BTLE Transfer
+//
+//  Created by Arjun B. Sharma on 4/25/16.
+//  Copyright © 2016 Apple. All rights reserved.
+//
 
-#import "BTLECentralViewController.h"
+#import "BLTECentralViewControllerTwo.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #import "TransferService.h"
 
-@interface BTLECentralViewController () <CBCentralManagerDelegate, CBPeripheralDelegate>
+@interface BLTECentralViewControllerTwo () <CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView   *textview;
 @property (strong, nonatomic) CBCentralManager      *centralManager;
@@ -68,13 +25,11 @@
 
 
 
-@implementation BTLECentralViewController
+@implementation BLTECentralViewControllerTwo
 
 
 
 #pragma mark - View Lifecycle
-
-
 
 - (void)viewDidLoad
 {
@@ -89,17 +44,17 @@
     _waterlevel.backgroundColor = [UIColor blueColor];
     [self.view addSubview:_waterlevel];
     
-//    BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
-//    myGraph.dataSource = self;
-//    myGraph.delegate = self;
-//    [self.view addSubview:myGraph];
-
+    //    BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    //    myGraph.dataSource = self;
+    //    myGraph.delegate = self;
+    //    [self.view addSubview:myGraph];
+    
     
 }
 
 
 - (void)changeWaterLevel:(double)newLevel {
-
+    
     double hundredY = 220;
     double hundredHeight = 275;
     double dy = (100-newLevel)/100*hundredY;
@@ -157,7 +112,7 @@
     }
     
     // The state must be CBCentralManagerStatePoweredOn...
-
+    
     // ... so start scanning
     [self scan];
     
@@ -178,7 +133,7 @@
 
 
 /** This callback comes whenever a peripheral that is advertising the TRANSFER_SERVICE_UUID is discovered.
- *  We check the RSSI, to make sure it's close enough that we're interested in it, and if it is, 
+ *  We check the RSSI, to make sure it's close enough that we're interested in it, and if it is,
  *  we start the connection process
  */
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
@@ -187,7 +142,7 @@
     if (RSSI.integerValue > -15) {
         return;
     }
-        
+    
     // Reject if the signal strength is too low to be close enough (Close is around -22dB)
     if (RSSI.integerValue < -35) {
         return;
@@ -229,7 +184,7 @@
     
     // Clear the data that we may already have
     [self.data setLength:0];
-
+    
     // Make sure we get the discovery callbacks
     peripheral.delegate = self;
     
@@ -274,7 +229,7 @@
         
         // And check if it's the right one
         if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]]) {
-     
+            
             // If it is, subscribe to it
             [peripheral setNotifyValue:YES forCharacteristic:characteristic];
         }
@@ -295,25 +250,24 @@
     
     //NSString *stringFromData = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
     
-//    NSRange range = NSMakeRange(0,1);
-//    NSString *parsedString = [stringFromData stringByReplacingCharactersInRange:range withString:@""];
-//    
-//    
-//    range = NSMakeRange(2,1);
-//    parsedString = [parsedString stringByReplacingCharactersInRange:range withString:@""];
+    //    NSRange range = NSMakeRange(0,1);
+    //    NSString *parsedString = [stringFromData stringByReplacingCharactersInRange:range withString:@""];
+    //
+    //
+    //    range = NSMakeRange(2,1);
+    //    parsedString = [parsedString stringByReplacingCharactersInRange:range withString:@""];
     
-//    NSString* parsedString = stringFromData;
-//    parsedString = [parsedString stringByReplacingOccurrencesOfString:@"<" withString:@""];
-//    parsedString = [parsedString stringByReplacingOccurrencesOfString:@">" withString:@""];
+    //    NSString* parsedString = stringFromData;
+    //    parsedString = [parsedString stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    //    parsedString = [parsedString stringByReplacingOccurrencesOfString:@">" withString:@""];
     
     
     
     NSLog(@"*********something from Data Received: %@**********", characteristic.value);
     
-    
-//    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-//    f.numberStyle = NSNumberFormatterDecimalStyle;
-//    NSNumber *numberTwoFromData = [f numberFromString:parsedString];
+    //    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    //    f.numberStyle = NSNumberFormatterDecimalStyle;
+    //    NSNumber *numberTwoFromData = [f numberFromString:parsedString];
     
     
     const uint8_t *bytes = [characteristic.value bytes]; // pointer to the bytes in data
@@ -322,62 +276,62 @@
     
     
     NSLog(@"*********number from Data Received: %d **********", numberFromData);
-//    NSLog(@"*********string from Data Received: %@ **********", stringFromData);
-//    NSLog(@"*********parsed string from Data Received: %@ **********", parsedString);
-//    NSLog(@"*********number from string from Data Received: %@ **********", numberTwoFromData);
+    //    NSLog(@"*********string from Data Received: %@ **********", stringFromData);
+    //    NSLog(@"*********parsed string from Data Received: %@ **********", parsedString);
+    //    NSLog(@"*********number from string from Data Received: %@ **********", numberTwoFromData);
     
     // Have we got everything we need?
     //if ([stringFromData isEqualToString:@"EOM"]) {
-        
-        //NSLog(@"received EOM");
-        // We have, so show the data, 
-        //[self.textview setText:[[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding]];
+    
+    //NSLog(@"received EOM");
+    // We have, so show the data,
+    //[self.textview setText:[[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding]];
     
     
-        //convert the NSString to an NSNumber so we can calculate the percentage of the cup that is full
-        //NSNumber  *aNum = [NSNumber numberWithInteger: [stringFromData integerValue]];
-        //NSLog(@"aNum: %@",aNum);//NSString to NSNumber
-        //double number=[numberFromData doubleValue];
-        double weight = numberFromData;
-        //NSLog(@"number before comp: %f",(double)number);//NSString to NSInteger
+    //convert the NSString to an NSNumber so we can calculate the percentage of the cup that is full
+    //NSNumber  *aNum = [NSNumber numberWithInteger: [stringFromData integerValue]];
+    //NSLog(@"aNum: %@",aNum);//NSString to NSNumber
+    //double number=[numberFromData doubleValue];
+    double weight = numberFromData;
+    //NSLog(@"number before comp: %f",(double)number);//NSString to NSInteger
     
-        //int64_t weight_numb = (number / 10) * 100;
+    //int64_t weight_numb = (number / 10) * 100;
     
-        weight = fabs(weight - 10);
+    weight = fabs(weight - 10);
     
-        weight = (weight / 131) * 100;
-        //NSLog(@"number after comp(before boundary check): %li",(long)number);
+    weight = (weight / 131) * 100;
+    //NSLog(@"number after comp(before boundary check): %li",(long)number);
     
-        if (weight <= 0 | numberFromData <= 10){
-            weight = 0;
-        }
-        else if (weight >= 100 | numberFromData >= 141){
-            weight = 100;
-        }
+    if (weight <= 0 | numberFromData <= 10){
+        weight = 0;
+    }
+    else if (weight >= 100 | numberFromData >= 141){
+        weight = 100;
+    }
     
-        //NSLog(@"number after comp(after boundary check): %li",(long)number);
+    //NSLog(@"number after comp(after boundary check): %li",(long)number);
     
-        NSString *weightString = [NSString stringWithFormat:@"%ld", (long)weight];
-        //NSLog(@"weight string is now: %@", weightString);
+    NSString *weightString = [NSString stringWithFormat:@"%ld", (long)weight];
+    //NSLog(@"weight string is now: %@", weightString);
     
     
-//        [self.textview setText:stringFromData];
+    //        [self.textview setText:stringFromData];
     
-        //NSString *numberFromDataString = [@(numberFromData) stringValue];
+    NSString *numberFromDataString = [@(numberFromData) stringValue];
     
-        //NSString* debugString = [weightString stringByAppendingString:numberFromDataString];
+    //NSString* debugString = [weightString stringByAppendingString:numberFromDataString];
     
-        self.percentageLabel.text = [weightString stringByAppendingString:@"%"];
-
-        [self changeWaterLevel:(double)weight];
+    //self.percentageLabel.text = [weightString stringByAppendingString:@"%"];
     
-        // Cancel our subscription to the characteristic
-        [peripheral setNotifyValue:NO forCharacteristic:characteristic];
-        
-        // and disconnect from the peripehral
-        [self.centralManager cancelPeripheralConnection:peripheral];
+    //[self changeWaterLevel:(double)weight];
+    
+    // Cancel our subscription to the characteristic
+    [peripheral setNotifyValue:NO forCharacteristic:characteristic];
+    
+    // and disconnect from the peripehral
+    [self.centralManager cancelPeripheralConnection:peripheral];
     //}
-
+    
     // Otherwise, just add the data on to what we already have
     [self.data appendData:characteristic.value];
     

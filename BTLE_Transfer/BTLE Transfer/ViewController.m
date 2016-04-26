@@ -59,8 +59,13 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+//    myGraph.dataSource = self;
+//    myGraph.delegate = self;
+//    [self.view addSubview:myGraph];
 }
 
 - (void)didReceiveMemoryWarning

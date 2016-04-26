@@ -50,6 +50,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "Classes/BEMSimpleLineGraphView.h"
 
 @interface ViewController : UIViewController
 

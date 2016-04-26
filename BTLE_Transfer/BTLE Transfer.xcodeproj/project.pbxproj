@@ -11,6 +11,8 @@
 		A96C7F921CB58C6500645586 /* cup_paint.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C7F911CB58C6500645586 /* cup_paint.png */; };
 		A96C7F941CB58D1D00645586 /* empty_cup_paintMod.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C7F931CB58D1D00645586 /* empty_cup_paintMod.png */; };
 		A96C7F971CB8973F00645586 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C7F951CB8973F00645586 /* MainStoryboard_iPhone.storyboard */; };
+		A9D9C09A1CC8475A0045F3C9 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = A9D9C0991CC8475A0045F3C9 /* Classes */; };
+		A9D9C0A01CCF0A490045F3C9 /* BLTECentralViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9C09F1CCF0A490045F3C9 /* BLTECentralViewControllerTwo.m */; };
 		B920C5DD15FAB25400A2DAC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B920C5DC15FAB25400A2DAC6 /* Default-568h@2x.png */; };
 		B92B557315E453690036A8A2 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B557215E453690036A8A2 /* Icon-57.png */; };
 		B92B557515E4536C0036A8A2 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B557415E4536C0036A8A2 /* Icon-114.png */; };
@@ -36,6 +38,9 @@
 		A96C7F911CB58C6500645586 /* cup_paint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cup_paint.png; sourceTree = SOURCE_ROOT; };
 		A96C7F931CB58D1D00645586 /* empty_cup_paintMod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty_cup_paintMod.png; sourceTree = SOURCE_ROOT; };
 		A96C7F961CB8973F00645586 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A9D9C0991CC8475A0045F3C9 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
+		A9D9C09E1CCF0A490045F3C9 /* BLTECentralViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTECentralViewControllerTwo.h; sourceTree = "<group>"; };
+		A9D9C09F1CCF0A490045F3C9 /* BLTECentralViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTECentralViewControllerTwo.m; sourceTree = "<group>"; };
 		B920C5DC15FAB25400A2DAC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		B92B557215E453690036A8A2 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-57.png"; path = "../Icon-57.png"; sourceTree = "<group>"; };
 		B92B557415E4536C0036A8A2 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-114.png"; path = "../Icon-114.png"; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		B9F9161F15D5806400B3B398 /* BTLE Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				A9D9C0991CC8475A0045F3C9 /* Classes */,
 				B9F9162815D5806400B3B398 /* AppDelegate.h */,
 				B9F9162915D5806400B3B398 /* AppDelegate.m */,
 				A96C7F951CB8973F00645586 /* MainStoryboard_iPhone.storyboard */,
@@ -119,6 +125,8 @@
 				B9F9163715D5806500B3B398 /* ViewController.h */,
 				B9F9163815D5806500B3B398 /* ViewController.m */,
 				B9F9163F15D5808200B3B398 /* BTLECentralViewController.h */,
+				A9D9C09E1CCF0A490045F3C9 /* BLTECentralViewControllerTwo.h */,
+				A9D9C09F1CCF0A490045F3C9 /* BLTECentralViewControllerTwo.m */,
 				B9F9164015D5808200B3B398 /* BTLECentralViewController.m */,
 				B9F9164215D5808F00B3B398 /* BTLEPeripheralViewController.h */,
 				B9F9164315D5808F00B3B398 /* BTLEPeripheralViewController.m */,
@@ -216,6 +224,7 @@
 				B92B557715E4541E0036A8A2 /* Icon-72.png in Resources */,
 				A96C7F921CB58C6500645586 /* cup_paint.png in Resources */,
 				A96C7F971CB8973F00645586 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A9D9C09A1CC8475A0045F3C9 /* Classes in Resources */,
 				B92B557915E4545B0036A8A2 /* Icon-144.png in Resources */,
 				B92B557F15E457480036A8A2 /* Default-Portrait@2x~ipad.png in Resources */,
 				B92B558115E4574D0036A8A2 /* Default-Portrait~ipad.png in Resources */,
@@ -230,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D9C0A01CCF0A490045F3C9 /* BLTECentralViewControllerTwo.m in Sources */,
 				B9F9162615D5806400B3B398 /* main.m in Sources */,
 				B9F9162A15D5806400B3B398 /* AppDelegate.m in Sources */,
 				B9F9163915D5806500B3B398 /* ViewController.m in Sources */,
@@ -274,6 +284,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -301,6 +312,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -320,6 +332,7 @@
 		B9F9163D15D5806500B3B398 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -338,6 +351,7 @@
 		B9F9163E15D5806500B3B398 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
