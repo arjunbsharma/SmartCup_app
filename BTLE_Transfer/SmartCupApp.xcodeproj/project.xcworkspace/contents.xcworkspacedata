@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BTLE Transfer.xcodeproj">
+      location = "self:/Users/arjunsharma/GitHub/SmartCup_app/BTLE_Transfer/SmartCupApp.xcodeproj">
    </FileRef>
 </Workspace>

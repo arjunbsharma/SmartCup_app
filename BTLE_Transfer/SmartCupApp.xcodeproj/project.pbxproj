@@ -51,14 +51,14 @@
 		B92B557E15E457480036A8A2 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		B92B558015E4574D0036A8A2 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		B92B558F15E4621C0036A8A2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		B9F9161515D5806400B3B398 /* BTLE Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTLE Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F9161515D5806400B3B398 /* SmartCupApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCupApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F9161915D5806400B3B398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B9F9161B15D5806400B3B398 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9F9161D15D5806400B3B398 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B9F9162115D5806400B3B398 /* BTLE Transfer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BTLE Transfer-Info.plist"; sourceTree = "<group>"; };
+		B9F9162115D5806400B3B398 /* SmartCupApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartCupApp-Info.plist"; sourceTree = "<group>"; };
 		B9F9162315D5806400B3B398 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B9F9162515D5806400B3B398 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B9F9162715D5806400B3B398 /* BTLE Transfer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BTLE Transfer-Prefix.pch"; sourceTree = "<group>"; };
+		B9F9162715D5806400B3B398 /* SmartCupApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartCupApp-Prefix.pch"; sourceTree = "<group>"; };
 		B9F9162815D5806400B3B398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9F9162915D5806400B3B398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9F9163515D5806500B3B398 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		B9F9161615D5806400B3B398 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9F9161515D5806400B3B398 /* BTLE Transfer.app */,
+				B9F9161515D5806400B3B398 /* SmartCupApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 				B92B557615E4541E0036A8A2 /* Icon-72.png */,
 				B92B557415E4536C0036A8A2 /* Icon-114.png */,
 				B92B557215E453690036A8A2 /* Icon-57.png */,
-				B9F9162115D5806400B3B398 /* BTLE Transfer-Info.plist */,
+				B9F9162115D5806400B3B398 /* SmartCupApp-Info.plist */,
 				B9F9162215D5806400B3B398 /* InfoPlist.strings */,
 				B9F9162515D5806400B3B398 /* main.m */,
-				B9F9162715D5806400B3B398 /* BTLE Transfer-Prefix.pch */,
+				B9F9162715D5806400B3B398 /* SmartCupApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 			);
 			name = "BLTE Transfer";
 			productName = "LE Transfer";
-			productReference = B9F9161515D5806400B3B398 /* BTLE Transfer.app */;
+			productReference = B9F9161515D5806400B3B398 /* SmartCupApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9F9160F15D5806400B3B398 /* Build configuration list for PBXProject "BTLE Transfer" */;
+			buildConfigurationList = B9F9160F15D5806400B3B398 /* Build configuration list for PBXProject "SmartCupApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -338,9 +338,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BTLE Transfer/BTLE Transfer-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/BTLE Transfer/BTLE Transfer-Info.plist";
-				PRODUCT_NAME = "BTLE Transfer";
+				GCC_PREFIX_HEADER = "BTLE Transfer/SmartCupApp-Prefix.pch";
+				INFOPLIST_FILE = "BTLE Transfer/SmartCupApp-Info.plist";
+				PRODUCT_NAME = SmartCupApp;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,9 +357,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BTLE Transfer/BTLE Transfer-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/BTLE Transfer/BTLE Transfer-Info.plist";
-				PRODUCT_NAME = "BTLE Transfer";
+				GCC_PREFIX_HEADER = "BTLE Transfer/SmartCupApp-Prefix.pch";
+				INFOPLIST_FILE = "BTLE Transfer/SmartCupApp-Info.plist";
+				PRODUCT_NAME = SmartCupApp;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -370,7 +370,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9F9160F15D5806400B3B398 /* Build configuration list for PBXProject "BTLE Transfer" */ = {
+		B9F9160F15D5806400B3B398 /* Build configuration list for PBXProject "SmartCupApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9F9163A15D5806500B3B398 /* Debug */,

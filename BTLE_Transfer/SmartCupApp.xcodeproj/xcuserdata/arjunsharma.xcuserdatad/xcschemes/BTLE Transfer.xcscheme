@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B9F9161415D5806400B3B398"
-               BuildableName = "BTLE Transfer.app"
+               BuildableName = "SmartCupApp.app"
                BlueprintName = "BLTE Transfer"
-               ReferencedContainer = "container:BTLE Transfer.xcodeproj">
+               ReferencedContainer = "container:SmartCupApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B9F9161415D5806400B3B398"
-            BuildableName = "BTLE Transfer.app"
+            BuildableName = "SmartCupApp.app"
             BlueprintName = "BLTE Transfer"
-            ReferencedContainer = "container:BTLE Transfer.xcodeproj">
+            ReferencedContainer = "container:SmartCupApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B9F9161415D5806400B3B398"
-            BuildableName = "BTLE Transfer.app"
+            BuildableName = "SmartCupApp.app"
             BlueprintName = "BLTE Transfer"
-            ReferencedContainer = "container:BTLE Transfer.xcodeproj">
+            ReferencedContainer = "container:SmartCupApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B9F9161415D5806400B3B398"
-            BuildableName = "BTLE Transfer.app"
+            BuildableName = "SmartCupApp.app"
             BlueprintName = "BLTE Transfer"
-            ReferencedContainer = "container:BTLE Transfer.xcodeproj">
+            ReferencedContainer = "container:SmartCupApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

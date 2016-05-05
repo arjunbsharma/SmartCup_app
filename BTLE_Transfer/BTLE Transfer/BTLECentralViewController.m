@@ -86,7 +86,7 @@
     // And somewhere to store the incoming data
     _data = [[NSMutableData alloc] init];
     _waterlevel = [[UILabel alloc] initWithFrame:CGRectMake(97, 220, 157, 275)];
-    _waterlevel.backgroundColor = [UIColor blueColor];
+    _waterlevel.backgroundColor = [UIColor greenColor];
     [self.view addSubview:_waterlevel];
     
 //    BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
@@ -293,7 +293,7 @@
         return;
     }
     
-    //NSString *stringFromData = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+    NSString *stringFromData = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
     
 //    NSRange range = NSMakeRange(0,1);
 //    NSString *parsedString = [stringFromData stringByReplacingCharactersInRange:range withString:@""];
@@ -309,6 +309,8 @@
     
     
     NSLog(@"*********something from Data Received: %@**********", characteristic.value);
+    NSLog(@"*********string from Data Received: %@**********", stringFromData);
+    NSLog(@"String length: %lu", (unsigned long)stringFromData.length);
     
     
 //    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
@@ -335,29 +337,34 @@
     
     
         //convert the NSString to an NSNumber so we can calculate the percentage of the cup that is full
-        //NSNumber  *aNum = [NSNumber numberWithInteger: [stringFromData integerValue]];
-        //NSLog(@"aNum: %@",aNum);//NSString to NSNumber
-        //double number=[numberFromData doubleValue];
-        double weight = numberFromData;
+        NSNumber  *aNum = [NSNumber numberWithInteger: [stringFromData integerValue]];
+        NSLog(@"aNum: %@",aNum);//NSString to NSNumber
+        double weight=[aNum doubleValue];
+        //double weight = numberFromData;
         //NSLog(@"number before comp: %f",(double)number);//NSString to NSInteger
     
         //int64_t weight_numb = (number / 10) * 100;
     
-        weight = fabs(weight - 10);
+        weight = fabs(weight - 41);
     
-        weight = (weight / 131) * 100;
+        weight = (weight / (60)) * 100;
         //NSLog(@"number after comp(before boundary check): %li",(long)number);
     
-        if (weight <= 0 | numberFromData <= 10){
+        if (weight <= 0 | numberFromData <= 40){
             weight = 0;
         }
-        else if (weight >= 100 | numberFromData >= 141){
+        else if (weight >= 100 | numberFromData >= 100){
             weight = 100;
         }
     
         //NSLog(@"number after comp(after boundary check): %li",(long)number);
     
         NSString *weightString = [NSString stringWithFormat:@"%ld", (long)weight];
+    
+        if (stringFromData.length > 3 | numberFromData > 115){
+            weightString = @"Invalid Weight";
+            weight = 0;
+        }
         //NSLog(@"weight string is now: %@", weightString);
     
     
